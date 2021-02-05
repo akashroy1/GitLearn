@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Akash</title>
+        <link rel="stylesheet" href="learn.css">
+    </head>
+
+    <body>
+        <h1>Hi! I am Akash.</h1>
+        <h2>Hi! I am Akash.</h2>
+        <h3>Hi! I am Akash.</h3>
+        <h4>Hi! I am Akash.</h4>
+        <h5>Hi! I am Akash.</h5>
+        <h6>Hi! I am Akash.</h6>
+        <h7>Hi! I am Akash.</h7>
+        <h8>Hi! I am Akash.</h8>
+        <h9>Hi! I am Akash.</h9>
+        <h10>Hi! I am Akash.</h10>
+        <p>How are you?</p>
+        <!-- <p title="About W3Schools">W3Schools is a web developer's site.</p> -->
+        <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="C:\Users\royak\Pictures\walpaper\6169198587_1c9ee4a4e4_b.jpg" style="width:100%">
+        <div class="text">Caption Text</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="C:\Users\royak\Pictures\walpaper\pexels-photo-443446.jpeg" style="width:100%">
+        <div class="text">Caption Two</div>
+        </div>
+    
+        <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="C:\Users\royak\Pictures\walpaper\question_marks_figures_3d_112755_1920x1080.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+    
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+    
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        }
+    </script>
+
+    </body>
+</html>
